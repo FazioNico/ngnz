@@ -180,6 +180,79 @@
           }
         }
       }
+    },
+    "demo-ts": {
+      "root": "apps/demo-ts",
+      "sourceRoot": "apps/demo-ts/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/demo-ts",
+            "index": "apps/demo-ts/src/index.html",
+            "main": "apps/demo-ts/src/main.ts",
+            "polyfills": "apps/demo-ts/src/polyfills.ts",
+            "tsConfig": "apps/demo-ts/tsconfig.app.json",
+            "assets": [
+              "apps/demo-ts/src/favicon.ico",
+              "apps/demo-ts/src/assets"
+            ],
+            "styles": ["apps/demo-ts/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/demo-ts/src/environments/environment.ts",
+                  "with": "apps/demo-ts/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "demo-ts:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "demo-ts:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/demo-ts/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/demo-ts"],
+          "options": {
+            "jestConfig": "apps/demo-ts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

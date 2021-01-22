@@ -1,0 +1,19 @@
+/*
+ * Remove template code below
+ */
+span {
+  display: block;
+  font-size: 3rem;
+}
+h1, p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+pre {
+  display: inline;
+}
+
+div {
+  margin-top: 2rem;
+  text-align: center;
+}
