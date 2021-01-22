@@ -132,6 +132,43 @@
           }
         }
       }
+    },
+    "copy-to-clipboard": {
+      "projectType": "library",
+      "root": "libs/copy-to-clipboard",
+      "sourceRoot": "libs/copy-to-clipboard/src",
+      "prefix": "ngnz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/copy-to-clipboard/tsconfig.lib.json",
+            "project": "libs/copy-to-clipboard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/copy-to-clipboard/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/copy-to-clipboard/src/**/*.ts",
+              "libs/copy-to-clipboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/copy-to-clipboard"],
+          "options": {
+            "jestConfig": "libs/copy-to-clipboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
