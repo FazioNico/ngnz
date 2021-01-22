@@ -10,13 +10,15 @@
   - [x] Angular Directive
   - [ ] Web Component
 
-
+- [@ngnz/dayjs](libs/dayjs/README.md) - ⏰ Immutable Date-Time utils.
+  - [x] ES6 function
+  - [x] Angular Directive
+  - [ ] Web Component
 
 ## Development
 Here tips and shortcut to build and developpe more features using Angular Schematics.
 ### Commandes
 - generate:
-  - application: 
   - buildable lib: `$ nx g @nrwl/web:library <lib_name> --buildable`
   - publishable lib: `$ nx g @nrwl/angular:library <lib_name> --publishable --importPath=@ngnz/<lib_name>`
   - angular: `nx g <type> <name> --project=<project_name>`
