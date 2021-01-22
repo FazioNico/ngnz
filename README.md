@@ -102,6 +102,7 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 
 **Library**
 - ✂️ **copy-to-clipboard** 
-  - ES6 function
-  - Angular Directive
+  - [x] ES6 function
+  - [x] Angular Directive
+  - [ ] Web Component
 
