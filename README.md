@@ -101,7 +101,7 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 ## Content
 
 **Library**
-- ✂️ [copy-to-clipboard]{/libs/copy-to-clipboard/README.md}
+- ✂️ [copy-to-clipboard][copy-to-clipboard](libs/copy-to-clipboard/README.md)
   - [x] ES6 function
   - [x] Angular Directive
   - [ ] Web Component
