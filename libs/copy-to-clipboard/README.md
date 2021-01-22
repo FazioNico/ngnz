@@ -1,7 +1,10 @@
 # ✂️ copy-to-clipboard
-Simple Angular module exposing basic Directive that'll try to use native `document.execCommand` to copy content text to clopboard and finally, display  overidable `alert` to confirme action to user.
+
+>Simple Angular module exposing basic Directive that'll try to use native `document.execCommand` to copy content text to clopboard and finally, display  overidable `alert` to confirme action to user.
+
 
 ## installation 
+
 Install `npm` package with the following commande: 
 ```bash
 $ npm install @ngzn/copy-to-clipboard
