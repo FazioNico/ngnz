@@ -4,5 +4,7 @@ module.exports = {
     '<rootDir>/apps/demo-ts',
     '<rootDir>/libs/nz-copy-to-clipboard',
     '<rootDir>/libs/copy-to-clipboard',
+    '<rootDir>/libs/core',
+    '<rootDir>/libs/dayjs',
   ],
 };

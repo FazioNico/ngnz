@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@ngnz/nz-copy-to-clipboard": ["libs/nz-copy-to-clipboard/src/index.ts"],
-      "@ngnz/copy-to-clipboard": ["libs/copy-to-clipboard/src/index.ts"]
+      "@ngnz/copy-to-clipboard": ["libs/copy-to-clipboard/src/index.ts"],
+      "@ngnz/core": ["libs/core/src/index.ts"],
+      "@ngnz/dayjs": ["libs/dayjs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

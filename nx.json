@@ -20,6 +20,8 @@
     "demo-e2e": { "tags": [], "implicitDependencies": ["demo"] },
     "nz-copy-to-clipboard": { "tags": [] },
     "copy-to-clipboard": { "tags": [] },
-    "demo-ts": { "tags": [] }
+    "demo-ts": { "tags": [] },
+    "core": { "tags": [] },
+    "dayjs": { "tags": [] }
   }
 }

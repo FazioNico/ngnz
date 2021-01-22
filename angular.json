@@ -253,6 +253,75 @@
           }
         }
       }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/core/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/core",
+            "tsConfig": "libs/core/tsconfig.lib.json",
+            "packageJson": "libs/core/package.json",
+            "main": "libs/core/src/index.ts",
+            "assets": ["libs/core/*.md"]
+          }
+        }
+      }
+    },
+    "dayjs": {
+      "projectType": "library",
+      "root": "libs/dayjs",
+      "sourceRoot": "libs/dayjs/src",
+      "prefix": "ngnz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/dayjs/tsconfig.lib.json",
+            "project": "libs/dayjs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/dayjs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/dayjs/src/**/*.ts",
+              "libs/dayjs/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/dayjs"],
+          "options": {
+            "jestConfig": "libs/dayjs/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
