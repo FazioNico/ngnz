@@ -5,7 +5,7 @@
 ## Content
 
 **Library**
-- ✂️ [@ngnz/copy-to-clipboard](libs/copy-to-clipboard/README.md) - Simply copy content text to clopboard and display alert to confirme action to user.
+- ✂️ [@ngnz/copy-to-clipboard](libs/copy-to-clipboard/README.md) - Copy content text to clopboard + display alert to confirme.
   - [x] ES6 function
   - [x] Angular Directive
   - [ ] Web Component
