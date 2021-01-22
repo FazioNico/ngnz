@@ -112,22 +112,22 @@
         }
       }
     },
-    "copy-to-clipboard": {
-      "root": "libs/copy-to-clipboard",
-      "sourceRoot": "libs/copy-to-clipboard/src",
+    "nz-copy-to-clipboard": {
+      "root": "libs/nz-copy-to-clipboard",
+      "sourceRoot": "libs/nz-copy-to-clipboard/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/copy-to-clipboard/**/*.ts"]
+            "lintFilePatterns": ["libs/nz-copy-to-clipboard/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/copy-to-clipboard"],
+          "outputs": ["coverage/libs/nz-copy-to-clipboard"],
           "options": {
-            "jestConfig": "libs/copy-to-clipboard/jest.config.js",
+            "jestConfig": "libs/nz-copy-to-clipboard/jest.config.js",
             "passWithNoTests": true
           }
         }

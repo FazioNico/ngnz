@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'copy-to-clipboard',
+  displayName: 'nz-copy-to-clipboard',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,5 +10,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/copy-to-clipboard',
+  coverageDirectory: '../../coverage/libs/nz-copy-to-clipboard',
 };

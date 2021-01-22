@@ -18,6 +18,6 @@
   "projects": {
     "demo": { "tags": [] },
     "demo-e2e": { "tags": [], "implicitDependencies": ["demo"] },
-    "copy-to-clipboard": { "tags": [] }
+    "nz-copy-to-clipboard": { "tags": [] }
   }
 }

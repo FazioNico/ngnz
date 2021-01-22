@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngnz/copy-to-clipboard": ["libs/copy-to-clipboard/src/index.ts"]
+      "@ngnz/nz-copy-to-clipboard": ["libs/nz-copy-to-clipboard/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
