@@ -1,4 +1,4 @@
-# @ngnz  🚀 
+#  🚀 @ngnz 
 
 > Useful and powerful tool to build Enterprise Mobile Cross Platform Application with Angular, React, Javascript ES6 or any simple website using HTML with Javascript. 
 
@@ -8,12 +8,12 @@
 - [@ngnz/copy-to-clipboard](libs/copy-to-clipboard/README.md) - ✂️ Copy content text to clopboard + display alert to confirme.
   - ✅ ES6 function
   - ✅ Angular Directive
-  - [ ] Web Component
+  - ❌ Web Component
 
 - [@ngnz/dayjs](libs/dayjs/README.md) - ⏰ Immutable Date-Time utils.
   - ✅ ES6 function
   - ✅ Angular Pipe
-  - [ ] Web Component
+  - ❌ Web Component
 
 ## Development
 Here tips and shortcut to build and developpe more features using Angular Schematics.
