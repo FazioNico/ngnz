@@ -6,13 +6,13 @@
 
 **Library**
 - [@ngnz/copy-to-clipboard](libs/copy-to-clipboard/README.md) - ✂️ Copy content text to clopboard + display alert to confirme.
-  - [x] ES6 function
-  - [x] Angular Directive
+  - ✅ ES6 function
+  - ✅ Angular Directive
   - [ ] Web Component
 
 - [@ngnz/dayjs](libs/dayjs/README.md) - ⏰ Immutable Date-Time utils.
-  - [x] ES6 function
-  - [x] Angular Directive
+  - ✅ ES6 function
+  - ✅ Angular Pipe
   - [ ] Web Component
 
 ## Development
@@ -67,5 +67,5 @@ Feel free to contrib.
 - pull request with your branch on the dev branch / or submit small fix on the master branch.
 I will merge it and upd project version soon as possible.
 
-## About author 👨‍💻
+## About author
 Hi, i'm a Senior Typescript Software Architect & teacher, living in Geneva Switzerland 🇨🇭  and i build software architecture and cross platform application for almost 15 years. You can follow me on Twitter @FazioNico or checkout my own website https://nicolasfazio.ch
