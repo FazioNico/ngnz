@@ -16,8 +16,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// import Angualr CopyToClipboardModule from @ngnz
-import { DayjsModuleModule } from '@ngnz/dayjs';
+// import for @ngnz/dayjs
+import { DayjsModule, DAYJS_LOCAL_PRESSET } from '@ngnz/dayjs';
+import 'dayjs/locale/en'; // import desired language
+// optionnal config for @ngnz/dayjs
+const localDayjsPressetFactory = () => {
+  // add logic to get user selected language
+  return 'en'
+};
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +32,15 @@ import { DayjsModuleModule } from '@ngnz/dayjs';
     // add module inside your Angular application module
     DayjsModuleModule 
   ],
-  providers: [],
+  providers: [
+    // optionnal config to change language pressets
+    {
+      provide: DAYJS_LOCAL_PRESSET,
+      useFactory() {
+        return localDayjsPressetFactory()
+      }
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
