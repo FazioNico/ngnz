@@ -1,6 +1,6 @@
 # @ngnz
 
-> Share with you some of my personnel powerfull tool to build Enterprise Mobile Cross Platform Application with Angular, React or Javascript. 
+> Useful and powerfull tool to build Enterprise Mobile Cross Platform Application with Angular, React or Javascript. 
 
 ## Content
 
