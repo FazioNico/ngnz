@@ -44,7 +44,7 @@ This feature is exporetable without Angular wrapping to allow using inside other
 
 ```ts
 // import function
-import { dayjsFunction } from '@ngnz/copy-to-clipboard';
+import { dayjsFunction } from '@ngnz/dayjs';
 
 // user copy function logic
 const value = '01/01/2021';
