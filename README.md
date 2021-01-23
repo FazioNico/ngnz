@@ -1,6 +1,6 @@
-# @ngnz
+# @ngnz  🚀 
 
-> Useful and powerful tool to build Enterprise Mobile Cross Platform Application with Angular, React or Javascript. 
+> Useful and powerful tool to build Enterprise Mobile Cross Platform Application with Angular, React, Javascript ES6 or any simple website using HTML with Javascript. 
 
 ## Content
 
@@ -56,3 +56,16 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ### Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+## Contribution
+Feel free to contrib.
+
+- clone/fork project
+- $ git checkout -b YOUR_BRANCH
+- do your work...
+- pass test...
+- pull request with your branch on the dev branch / or submit small fix on the master branch.
+I will merge it and upd project version soon as possible.
+
+## About author 👨‍💻
+Hi, i'm a Senior Typescript Software Architect & teacher, living in Geneva Switzerland 🇨🇭  and i build software architecture and cross platform application for almost 15 years. You can follow me on Twitter @FazioNico or checkout my own website https://nicolasfazio.ch
