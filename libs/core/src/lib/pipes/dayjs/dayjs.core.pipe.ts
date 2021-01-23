@@ -8,6 +8,8 @@ import * as relativeTime from 'dayjs/plugin/relativeTime';
 dayJS.extend(relativeTime);
 // Lib Doc: https://day.js.org/en/
 
+export type DayJsPipeResponse = string | boolean | dayJS.Dayjs;
+
 export class NzDayJSPipe {
 
   private readonly _localPresset: string;
@@ -21,7 +23,7 @@ export class NzDayJSPipe {
     method: 'format' | 'fromNow' | 'to' | 'isAfter',
     ops: any,
     bool = false
-  ): unknown {
+  ): DayJsPipeResponse {
     if (!value) return;
     switch (true) {
       case method === 'fromNow' || method === 'to':
