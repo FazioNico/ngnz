@@ -1,6 +1,6 @@
 # @ngnz
 
-> Useful and powerfull tool to build Enterprise Mobile Cross Platform Application with Angular, React or Javascript. 
+> Useful and powerful tool to build Enterprise Mobile Cross Platform Application with Angular, React or Javascript. 
 
 ## Content
 
