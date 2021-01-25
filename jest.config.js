@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/core',
     '<rootDir>/libs/dayjs',
     '<rootDir>/libs/ionic-modal-guard',
+    '<rootDir>/apps/demo-ionic',
   ],
 };

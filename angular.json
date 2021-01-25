@@ -16,8 +16,13 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
-            "styles": ["apps/demo/src/styles.scss"],
+            "assets": [
+              "apps/demo/src/favicon.ico",
+              "apps/demo/src/assets"
+            ],
+            "styles": [
+              "apps/demo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -78,7 +83,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/demo"],
+          "outputs": [
+            "coverage/apps/demo"
+          ],
           "options": {
             "jestConfig": "apps/demo/jest.config.js",
             "passWithNoTests": true
@@ -107,7 +114,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/demo-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -141,7 +150,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/copy-to-clipboard"],
+          "outputs": [
+            "coverage/libs/copy-to-clipboard"
+          ],
           "options": {
             "jestConfig": "libs/copy-to-clipboard/jest.config.js",
             "passWithNoTests": true
@@ -156,7 +167,9 @@
       "architect": {
         "build": {
           "builder": "@nrwl/web:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/demo-ts",
             "index": "apps/demo-ts/src/index.html",
@@ -167,7 +180,9 @@
               "apps/demo-ts/src/favicon.ico",
               "apps/demo-ts/src/assets"
             ],
-            "styles": ["apps/demo-ts/src/styles.css"],
+            "styles": [
+              "apps/demo-ts/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -209,12 +224,16 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/demo-ts/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/demo-ts/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/demo-ts"],
+          "outputs": [
+            "coverage/apps/demo-ts"
+          ],
           "options": {
             "jestConfig": "apps/demo-ts/jest.config.js",
             "passWithNoTests": true
@@ -230,12 +249,16 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/core/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/core/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/core"],
+          "outputs": [
+            "coverage/libs/core"
+          ],
           "options": {
             "jestConfig": "libs/core/jest.config.js",
             "passWithNoTests": true
@@ -243,13 +266,17 @@
         },
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/libs/core",
             "tsConfig": "libs/core/tsconfig.lib.json",
             "packageJson": "libs/core/package.json",
             "main": "libs/core/src/index.ts",
-            "assets": ["libs/core/*.md"]
+            "assets": [
+              "libs/core/*.md"
+            ]
           }
         }
       }
@@ -283,7 +310,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/dayjs"],
+          "outputs": [
+            "coverage/libs/dayjs"
+          ],
           "options": {
             "jestConfig": "libs/dayjs/jest.config.js",
             "passWithNoTests": true
@@ -320,10 +349,191 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ionic-modal-guard"],
+          "outputs": [
+            "coverage/libs/ionic-modal-guard"
+          ],
           "options": {
             "jestConfig": "libs/ionic-modal-guard/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "demo-ionic": {
+      "projectType": "application",
+      "root": "apps/demo-ionic",
+      "sourceRoot": "apps/demo-ionic/src",
+      "prefix": "ngnz",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/demo-ionic",
+            "index": "apps/demo-ionic/src/index.html",
+            "main": "apps/demo-ionic/src/main.ts",
+            "polyfills": "apps/demo-ionic/src/polyfills.ts",
+            "tsConfig": "apps/demo-ionic/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/demo-ionic/src/favicon.ico",
+              "apps/demo-ionic/src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              }
+            ],
+            "styles": [
+              "apps/demo-ionic/src/styles.scss",
+              {
+                "input": "node_modules/@ionic/angular/css/normalize.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/structure.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/typography.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/core.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/padding.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/float-elements.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-alignment.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/text-transformation.css"
+              },
+              {
+                "input": "node_modules/@ionic/angular/css/flex-utils.css"
+              },
+              {
+                "input": "apps/demo-ionic/src/theme/variables.css"
+              }
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/demo-ionic/src/environments/environment.ts",
+                  "with": "apps/demo-ionic/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "demo-ionic:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-ionic:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo-ionic:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/demo-ionic/src/**/*.ts",
+              "apps/demo-ionic/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/demo-ionic"
+          ],
+          "options": {
+            "jestConfig": "apps/demo-ionic/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "ionic-cordova-serve": {
+          "builder": "@ionic/angular-toolkit:cordova-serve",
+          "options": {
+            "cordovaBuildTarget": "demo-ionic:ionic-cordova-build",
+            "devServerTarget": "demo-ionic:serve"
+          },
+          "configurations": {
+            "production": {
+              "cordovaBuildTarget": "demo-ionic:ionic-cordova-build:production",
+              "devServerTarget": "demo-ionic:serve:production"
+            }
+          }
+        },
+        "ionic-cordova-build": {
+          "builder": "@ionic/angular-toolkit:cordova-build",
+          "options": {
+            "browserTarget": "demo-ionic:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-ionic:build:production"
+            }
+          }
+        }
+      }
+    },
+    "demo-ionic-e2e": {
+      "root": "apps/demo-ionic-e2e",
+      "sourceRoot": "apps/demo-ionic-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/demo-ionic-e2e/cypress.json",
+            "tsConfig": "apps/demo-ionic-e2e/tsconfig.e2e.json",
+            "devServerTarget": "demo-ionic:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "demo-ionic:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/demo-ionic-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
