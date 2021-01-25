@@ -6,5 +6,6 @@ module.exports = {
     '<rootDir>/libs/copy-to-clipboard',
     '<rootDir>/libs/core',
     '<rootDir>/libs/dayjs',
+    '<rootDir>/libs/ionic-modal-guard',
   ],
 };

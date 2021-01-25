@@ -21,6 +21,7 @@
     "copy-to-clipboard": { "tags": [] },
     "demo-ts": { "tags": [] },
     "core": { "tags": [] },
-    "dayjs": { "tags": [] }
+    "dayjs": { "tags": [] },
+    "ionic-modal-guard": { "tags": [] }
   }
 }

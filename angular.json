@@ -290,6 +290,43 @@
           }
         }
       }
+    },
+    "ionic-modal-guard": {
+      "projectType": "library",
+      "root": "libs/ionic-modal-guard",
+      "sourceRoot": "libs/ionic-modal-guard/src",
+      "prefix": "ngnz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ionic-modal-guard/tsconfig.lib.json",
+            "project": "libs/ionic-modal-guard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ionic-modal-guard/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ionic-modal-guard/src/**/*.ts",
+              "libs/ionic-modal-guard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ionic-modal-guard"],
+          "options": {
+            "jestConfig": "libs/ionic-modal-guard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
