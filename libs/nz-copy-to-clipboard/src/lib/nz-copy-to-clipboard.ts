@@ -18,8 +18,10 @@ export const nzCopyToClipboard = async (text: string, ops: NzCopyToClopboardOpti
   if (result && !ops?.handler) {
     alert('copied!');
   }
+  // if user specify handler option run function
   if (result && ops?.handler) {
     ops?.handler?.(text)
   }
+  // return result boolean
   return result;
 }
