@@ -15,6 +15,11 @@
   - ✅ Angular Pipe
   - ❌ Web Component
 
+- [@ngnz/ionic-modal-guard](libs/ionic-modal-guard/README.md) - 🛡 Prevent navigation back when user have modal open.
+  - ❌ ES6 function
+  - ✅ Angular Guard
+  - ❌ Web Component
+
 ## Development
 Here tips and shortcut to build and developpe more features using Angular Schematics.
 ### Commandes
