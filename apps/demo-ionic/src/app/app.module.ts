@@ -7,6 +7,7 @@ import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { PageModalComponent } from './page-modal/page-modal.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
 
 @NgModule({
   declarations: [AppComponent, PageOneComponent, PageTwoComponent, PageModalComponent],
@@ -15,7 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
     IonicModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    IonicModalGuard
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
