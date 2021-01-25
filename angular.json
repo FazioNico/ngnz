@@ -112,38 +112,6 @@
         }
       }
     },
-    "nz-copy-to-clipboard": {
-      "root": "libs/nz-copy-to-clipboard",
-      "sourceRoot": "libs/nz-copy-to-clipboard/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/nz-copy-to-clipboard/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/nz-copy-to-clipboard"],
-          "options": {
-            "jestConfig": "libs/nz-copy-to-clipboard/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/nz-copy-to-clipboard",
-            "tsConfig": "libs/nz-copy-to-clipboard/tsconfig.lib.json",
-            "packageJson": "libs/nz-copy-to-clipboard/package.json",
-            "main": "libs/nz-copy-to-clipboard/src/index.ts",
-            "assets": ["libs/nz-copy-to-clipboard/*.md"]
-          }
-        }
-      }
-    },
     "copy-to-clipboard": {
       "projectType": "library",
       "root": "libs/copy-to-clipboard",

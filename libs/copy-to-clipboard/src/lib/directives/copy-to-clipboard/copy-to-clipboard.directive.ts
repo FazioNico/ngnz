@@ -1,5 +1,5 @@
 import { Directive, HostListener, Input } from '@angular/core';
-import { NzCopyToClopboardOptions, nzCopyToClipboard } from '@ngnz/nz-copy-to-clipboard'
+import { NzCopyToClopboardOptions, nzCopyToClipboard } from '@ngnz/core';
 
 @Directive({
   selector: '[ngnzCopyToClipboard]'
