@@ -16,13 +16,8 @@
             "polyfills": "apps/demo/src/polyfills.ts",
             "tsConfig": "apps/demo/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/demo/src/favicon.ico",
-              "apps/demo/src/assets"
-            ],
-            "styles": [
-              "apps/demo/src/styles.scss"
-            ],
+            "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
+            "styles": ["apps/demo/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,9 +78,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/demo"
-          ],
+          "outputs": ["coverage/apps/demo"],
           "options": {
             "jestConfig": "apps/demo/jest.config.js",
             "passWithNoTests": true
@@ -114,9 +107,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/demo-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/demo-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -150,9 +141,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/copy-to-clipboard"
-          ],
+          "outputs": ["coverage/libs/copy-to-clipboard"],
           "options": {
             "jestConfig": "libs/copy-to-clipboard/jest.config.js",
             "passWithNoTests": true
@@ -167,9 +156,7 @@
       "architect": {
         "build": {
           "builder": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/demo-ts",
             "index": "apps/demo-ts/src/index.html",
@@ -180,9 +167,7 @@
               "apps/demo-ts/src/favicon.ico",
               "apps/demo-ts/src/assets"
             ],
-            "styles": [
-              "apps/demo-ts/src/styles.css"
-            ],
+            "styles": ["apps/demo-ts/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -224,16 +209,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/demo-ts/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/demo-ts/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/demo-ts"
-          ],
+          "outputs": ["coverage/apps/demo-ts"],
           "options": {
             "jestConfig": "apps/demo-ts/jest.config.js",
             "passWithNoTests": true
@@ -249,16 +230,12 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/core/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/core/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/core"
-          ],
+          "outputs": ["coverage/libs/core"],
           "options": {
             "jestConfig": "libs/core/jest.config.js",
             "passWithNoTests": true
@@ -266,17 +243,13 @@
         },
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/core",
             "tsConfig": "libs/core/tsconfig.lib.json",
             "packageJson": "libs/core/package.json",
             "main": "libs/core/src/index.ts",
-            "assets": [
-              "libs/core/*.md"
-            ]
+            "assets": ["libs/core/*.md"]
           }
         }
       }
@@ -310,9 +283,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/dayjs"
-          ],
+          "outputs": ["coverage/libs/dayjs"],
           "options": {
             "jestConfig": "libs/dayjs/jest.config.js",
             "passWithNoTests": true
@@ -349,9 +320,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/ionic-modal-guard"
-          ],
+          "outputs": ["coverage/libs/ionic-modal-guard"],
           "options": {
             "jestConfig": "libs/ionic-modal-guard/jest.config.js",
             "passWithNoTests": true
@@ -476,9 +445,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/demo-ionic"
-          ],
+          "outputs": ["coverage/apps/demo-ionic"],
           "options": {
             "jestConfig": "apps/demo-ionic/jest.config.js",
             "passWithNoTests": true
@@ -531,9 +498,44 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
+            "lintFilePatterns": ["apps/demo-ionic-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "pdf-flip-book": {
+      "projectType": "library",
+      "root": "libs/pdf-flip-book",
+      "sourceRoot": "libs/pdf-flip-book/src",
+      "prefix": "ngnz",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/pdf-flip-book/tsconfig.lib.json",
+            "project": "libs/pdf-flip-book/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/pdf-flip-book/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
             "lintFilePatterns": [
-              "apps/demo-ionic-e2e/**/*.{js,ts}"
+              "libs/pdf-flip-book/src/**/*.ts",
+              "libs/pdf-flip-book/src/**/*.html"
             ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pdf-flip-book"],
+          "options": {
+            "jestConfig": "libs/pdf-flip-book/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -8,5 +8,6 @@ module.exports = {
     '<rootDir>/libs/dayjs',
     '<rootDir>/libs/ionic-modal-guard',
     '<rootDir>/apps/demo-ionic',
+    '<rootDir>/libs/pdf-flip-book',
   ],
 };
