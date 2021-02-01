@@ -42,6 +42,7 @@
     "core-js": "^3.6.5",
     "dayjs": "^1.10.4",
     "document-register-element": "1.13.1",
+    "pdfjs-dist": "^2.6.347",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
@@ -54,14 +55,18 @@
     "@angular/cli": "~11.0.0",
     "@angular/compiler-cli": "^11.0.0",
     "@angular/language-service": "^11.0.0",
+    "@ionic/angular-toolkit": "latest",
     "@nrwl/cli": "11.1.5",
     "@nrwl/cypress": "11.1.5",
     "@nrwl/eslint-plugin-nx": "11.1.5",
     "@nrwl/jest": "11.1.5",
+    "@nrwl/node": "11.1.5",
     "@nrwl/tao": "11.1.5",
+    "@nrwl/web": "11.1.5",
     "@nrwl/workspace": "11.1.5",
     "@types/jest": "26.0.8",
     "@types/node": "12.12.38",
+    "@types/pdfjs-dist": "^2.1.7",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "codelyzer": "^6.0.0",
@@ -72,14 +77,11 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.1",
-    "prettier": "2.2.1",
     "ng-packagr": "^11.0.0",
+    "prettier": "2.2.1",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.3",
-    "@nrwl/node": "11.1.5",
-    "@nrwl/web": "11.1.5",
-    "@ionic/angular-toolkit": "latest"
+    "typescript": "~4.0.3"
   }
 }

@@ -1,4 +1,18 @@
-<!-- <a #toto class="_df_custom" href="#" source="{{pdfURL}}"> 
-  Clickable Flipbook Link
-</a> -->
-xx
+<div id="__ngnz_pdf_viewer">
+
+  <div id="__ngnz_pdf_controls">
+    <div id="navigation_controls" *ngIf="isControlsVisible">
+        <button id="go_previous" (click)="actions('go_previous')">Previous</button>
+        <input id="current_page" [(ngModel)]="currentPage" (keyup)="actions('go_to', $event)" type="number"/>
+        <button id="go_next" (click)="actions('go_next')">Next</button>
+    </div>
+
+    <div id="zoom_controls"  *ngIf="isControlsVisible">  
+        <button id="zoom_in" (click)="actions('zoom_in')">+</button>
+        <button id="zoom_out" (click)="actions('zoom_out')">-</button>
+    </div>
+  </div>
+
+  <canvas #canvas></canvas>
+
+</div>
