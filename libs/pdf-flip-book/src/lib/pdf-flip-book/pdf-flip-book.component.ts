@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 // Using PDFJS lib.
 // Doc: https://github.com/mozilla/pdf.js
 import { getDocument, GlobalWorkerOptions } from 'pdfjs-dist';
@@ -10,7 +10,16 @@ GlobalWorkerOptions.workerSrc = PDFJSWorker;
 @Component({
   selector: 'ngnz-pdf-flip',
   templateUrl: `./pdf-flip-book.component.html`,
-  styles: [``],
+  styles: [`
+  :host {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  /* :host canvas {
+    max-width: 60vw;
+  } */
+  `],
 })
 export class PdfFlipComponent implements OnInit {
 
@@ -23,6 +32,8 @@ export class PdfFlipComponent implements OnInit {
   @Input() public isControlsVisible = true;
   public pdf: PDFDocumentProxy = null;
 
+  constructor(public ref: ElementRef, private _renderer: Renderer2) {}
+
   async ngOnInit() {
     const pdf: PDFDocumentProxy = await getDocument(this.pdfURL).promise;
     this.pdf = pdf;
@@ -30,6 +41,10 @@ export class PdfFlipComponent implements OnInit {
   }
 
   private async _render() {
+    console.log('-->', this.ref.nativeElement);
+    
+    // this._renderer.
+    // const height = this.ref.nativeElement
     const page = await this.pdf.getPage(this.currentPage);
     const ctx = this.canvas.nativeElement.getContext('2d');
     const viewport = page.getViewport(this.zoom);
