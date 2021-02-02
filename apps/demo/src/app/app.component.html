@@ -119,14 +119,15 @@ ng affected:e2e
     >
   </details>
 </main> -->
+<ul id="side-menu">
+  <li>
+    <a href="#" routerLink="/">index</a>
+  </li>
+  <li>
+    <a href="#" routerLink="/pdf-flip-book">pdf-flip-book</a>
+  </li>
+</ul>  
+<div id="page-content">
+  <router-outlet></router-outlet>
+</div>
 
-<router-outlet>
-  <ul>
-    <li>
-      <a href="#" routerLink="/">index</a>
-    </li>
-    <li>
-      <a href="#" routerLink="/pdf-flip-book">go pdf-flip-book</a>
-    </li>
-  </ul>  
-</router-outlet>
