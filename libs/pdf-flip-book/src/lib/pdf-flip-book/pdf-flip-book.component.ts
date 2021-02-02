@@ -11,14 +11,21 @@ GlobalWorkerOptions.workerSrc = PDFJSWorker;
   selector: 'ngnz-pdf-flip',
   templateUrl: `./pdf-flip-book.component.html`,
   styles: [`
+
   :host {
     display: block;
     width: 100%;
     height: auto;
+    overflow: hidden;
+    position: relative;
   }
   /* :host canvas {
     max-width: 60vw;
   } */
+
+  /**
+  * objetParent = element.offsetParent
+  */
   `],
 })
 export class PdfFlipComponent implements OnInit {
@@ -32,7 +39,7 @@ export class PdfFlipComponent implements OnInit {
   @Input() public isControlsVisible = true;
   public pdf: PDFDocumentProxy = null;
 
-  constructor(public ref: ElementRef, private _renderer: Renderer2) {}
+  constructor(public ref: ElementRef<HTMLElement>, private _renderer: Renderer2) {}
 
   async ngOnInit() {
     const pdf: PDFDocumentProxy = await getDocument(this.pdfURL).promise;
@@ -41,13 +48,14 @@ export class PdfFlipComponent implements OnInit {
   }
 
   private async _render() {
-    console.log('-->', this.ref.nativeElement);
     
     // this._renderer.
-    // const height = this.ref.nativeElement
+    const height = this.ref.nativeElement.clientHeight;
+    const width = this.ref.nativeElement.clientWidth;
     const page = await this.pdf.getPage(this.currentPage);
     const ctx = this.canvas.nativeElement.getContext('2d');
-    const viewport = page.getViewport(this.zoom);
+    const viewport: any = page.getViewport(this.zoom);
+    console.log('-->', this.ref.nativeElement.clientWidth, viewport);
     this.canvas.nativeElement.width = viewport.width;
     this.canvas.nativeElement.height = viewport.height;
     page.render({
