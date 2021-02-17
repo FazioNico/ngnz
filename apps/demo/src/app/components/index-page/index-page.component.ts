@@ -10,7 +10,7 @@ export class IndexPageComponent {
 
   download() {
     const blob = new Blob(['{"name": "test"}']);
-    const blobUrl = URL.createObjectURL(blob);
+    const blobUrl = window.URL.createObjectURL(blob);
 
     // Create a link element
     const link = document.createElement('a');
