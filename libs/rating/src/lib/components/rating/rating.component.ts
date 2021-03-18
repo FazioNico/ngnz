@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
               *ngSwitchCase="currentRate >= i && currentRate >= i + 1"
               xmlns='http://www.w3.org/2000/svg' 
               viewBox='0 0 512 512'
-              [attr.class]="hoverEffect"
+              [attr.class]="isReadonly ? '' : hoverEffect"
               [attr.fill]="color"
               [style.color]="color"
               [style.width]="maxPxSize + 'px'"
@@ -24,7 +24,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
               *ngSwitchCase="currentRate <= i"
               xmlns='http://www.w3.org/2000/svg' 
               viewBox='0 0 512 512'
-              [attr.class]="hoverEffect"
+              [attr.class]="isReadonly ? '' : hoverEffect"
               [style.color]="color"
               [style.width]="maxPxSize + 'px'"
               [style.height]="maxPxSize + 'px'"
@@ -41,7 +41,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
               *ngSwitchCase="currentRate > i && currentRate < i + 1"
               xmlns='http://www.w3.org/2000/svg' 
               viewBox='0 0 512 512'
-              [attr.class]="hoverEffect"
+              [attr.class]="isReadonly ? '' : hoverEffect"
               [style.color]="color"
               [attr.fill]="color"
               [style.width]="maxPxSize + 'px'"
@@ -74,11 +74,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
       margin: 0;
       padding: 0.1rem;
       display: inline-block;
-      cursor: pointer;
     }
     :host svg {
       transition: 125ms  all ease-in-out;
     }
+    
+    :host svg.opacity,
+    :host svg.scale {
+      cursor: pointer;
+    }
+
     :host svg.opacity:hover {
       opacity: 0.5;
     }
@@ -89,6 +94,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class RatingComponent {
 
+  @Input() isReadonly = true;
   @Input() currentRate = 2.5;
   @Input() maxRate = 5;
   @Input() maxPxSize = 32;
@@ -97,6 +103,7 @@ export class RatingComponent {
   @Output() eventActions: EventEmitter<{type: string, payload: number}> = new EventEmitter(null);
 
   rate(value:number) {
+    if (this.isReadonly) return;
     this.eventActions.emit({
       type: 'onRating',
       payload: ++value
