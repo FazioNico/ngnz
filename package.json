@@ -26,7 +26,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "deploy:demo-ionic": "ng deploy demo-ionic --base-href=/ngnz/"
+    "deploy:demo-ionic": "nx build demo-ionic --prod --base-href=/ngnz/ && npx gh-pages -d dist/apps/demo-ionic/"
   },
   "private": false,
   "dependencies": {
