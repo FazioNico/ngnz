@@ -6,6 +6,7 @@ import { PageTwoComponent } from './page-two/page-two.component';
 import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
 import { PageRatingComponent } from './page-rating/page-rating.component';
 import { PageDayjsComponent } from './page-dayjs/page-dayjs.component';
+import { PageCopyComponent } from './page-copy/page-copy.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
     component: PageDayjsComponent,
     canActivate: [IonicModalGuard]
   },
+  {
+    path: 'page-copy',
+    component: PageCopyComponent,
+    canActivate: [IonicModalGuard]
+  }
 ];
 
 @NgModule({

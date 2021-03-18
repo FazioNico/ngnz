@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      @ngnz/copy-to-clipboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding-horizontal">
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-padding">
+        <h1>✂️ Copy to clipboard Directive</h1>
+        <p>Copy content text to clopboard + display alert to confirme.</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- simple demo -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Basic Demo</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Copy to clipboard by click
+          </ion-card-header>
+          <ion-card-content>
+            <p>Text to copy: <code>testing</code></p>
+            <br/>
+            <ion-button ngnzCopyToClipboard="testing">Copy</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+    <!-- custom Handler demo -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Custom Handler</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Use custome notify handler
+          </ion-card-header>
+          <ion-card-content>
+            <p>Text to copy: <code>testing</code></p>
+            <br/>
+            <ion-button 
+                ngnzCopyToClipboard="testing"
+                [ngnzCopyToClipboardOptions]="options">Copy</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- input demo -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Ion-Item with icon and custom handler</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Copy to clipboard by click
+          </ion-card-header>
+          <ion-card-content>
+            <p>Text to copy: <code>{{longTxt}}</code></p>
+            <br/>
+            <ion-item>
+              <ion-icon 
+                  ngnzCopyToClipboard="longTxt" 
+                  [ngnzCopyToClipboardOptions]="options"
+                  slot="start" 
+                  name="copy"></ion-icon>
+              <p>
+                {{longTxt}}
+              </p>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

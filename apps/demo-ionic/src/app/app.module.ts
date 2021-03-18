@@ -8,6 +8,7 @@ import { PageTwoComponent } from './page-two/page-two.component';
 import { PageModalComponent } from './page-modal/page-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { CopyToClipboardModule } from '@ngnz/copy-to-clipboard';
 import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
 import { RatingModule } from '@ngnz/rating';
 import { DayjsModule, DAYJS_LOCAL_PRESSET } from '@ngnz/dayjs';
@@ -20,16 +21,26 @@ const localDayjsPressetFactory = () => {
 
 import { PageRatingComponent } from './page-rating/page-rating.component';
 import { PageDayjsComponent } from './page-dayjs/page-dayjs.component';
+import { PageCopyComponent } from './page-copy/page-copy.component';
 
 
 @NgModule({
-  declarations: [AppComponent, PageOneComponent, PageTwoComponent, PageModalComponent, PageRatingComponent, PageDayjsComponent],
+  declarations: [
+    AppComponent, 
+    PageOneComponent, 
+    PageTwoComponent, 
+    PageModalComponent, 
+    PageRatingComponent, 
+    PageDayjsComponent, 
+    PageCopyComponent
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(),
     AppRoutingModule,
     RatingModule,
-    DayjsModule
+    DayjsModule,
+    CopyToClipboardModule
   ],
   providers: [
     IonicModalGuard,

@@ -30,7 +30,7 @@ export class AppComponent {
     {
       title: 'Directives',
       items: [
-        {title: '✂️ @ngnz/copy-to-clipboard', path: 'page-copy-to-clipboard'}
+        {title: '✂️ @ngnz/copy-to-clipboard', path: 'page-copy'}
       ]
     },   
   ]
