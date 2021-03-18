@@ -20,6 +20,11 @@
   - ✅ Angular Guard
   - ❌ Web Component
 
+- [@ngnz/rating](libs/rating/README.md) - ⭐ Star Rating Angular Component
+  - ❌ ES6 function
+  - ✅ Angular Component
+  - ❌ Web Component
+
 ## Development
 Here tips and shortcut to build and developpe more features using Angular Schematics.
 ### Commandes
