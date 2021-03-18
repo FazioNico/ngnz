@@ -3,8 +3,16 @@
     <ion-title>@ngnz/ionic-modal-guard</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
-  <h1>🛡 ionic-modal-guard</h1>
-  <p>Hello Page Two</p>
-  <ion-button (click)="displayModal()">display Modal</ion-button>
+<ion-content class="ion-padding-horizontal">
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-padding">
+        <h1>🛡 ionic-modal-guard</h1>
+        <p>Prevent navigation back when user have ionic modal open.</p>
+        <ion-button (click)="displayModal()">display Modal</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

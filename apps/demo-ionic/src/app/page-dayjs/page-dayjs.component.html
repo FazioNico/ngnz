@@ -1,1 +1,99 @@
-<p>page-dayjs works!</p>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      @ngnz/rating
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding-horizontal">
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-padding">
+        <h1>⏰ Dayjs directive</h1>
+        <p>Immutable Date-Time utils allow you to display Date like <code>1 minute ago</code>.</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- from now -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Simple demo</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Using `fromNow`
+          </ion-card-header>
+          <ion-card-content>
+            <p>Time form 01/01/2021 to now</p>
+            <code>
+              {{'01/01/2021'|dayjs: 'fromNow'}}
+            </code>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- from to -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Get time from X to Y</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Using `to`
+          </ion-card-header>
+          <ion-card-content>
+            <p>Time from 01/01/2021 to 01/04/2021</p>
+            <code>
+              {{'01/01/2021'|dayjs: 'to': '01/04/2021'}}
+            </code>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- is after -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>X is after Y</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Using `isAfter`
+          </ion-card-header>
+          <ion-card-content>
+            <p>01/01/2021 is after 01/04/2021</p>
+            <code>
+              {{'01/01/2021'|dayjs: 'isAfter': '01/04/2021'}}
+            </code>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- formating -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Date formating</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>
+            Using `format`
+          </ion-card-header>
+          <ion-card-content>
+            <p>01/01/2021 formated with format <code>YYYY</code></p>
+            <code>
+              {{'01/01/2021'|dayjs: 'format': 'YYYY'}}
+            </code>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

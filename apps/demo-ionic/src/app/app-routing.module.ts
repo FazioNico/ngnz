@@ -5,6 +5,7 @@ import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
 import { PageRatingComponent } from './page-rating/page-rating.component';
+import { PageDayjsComponent } from './page-dayjs/page-dayjs.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,13 @@ const routes: Routes = [
   },
   {
     path: 'page-rating',
-    component: PageRatingComponent
+    component: PageRatingComponent,
+    canActivate: [IonicModalGuard]
+  },
+  {
+    path: 'page-dayjs',
+    component: PageDayjsComponent,
+    canActivate: [IonicModalGuard]
   },
 ];
 
