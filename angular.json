@@ -511,6 +511,10 @@
               "browserTarget": "demo-ionic:build:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     },
