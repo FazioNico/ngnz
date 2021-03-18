@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      @ngnz/rating
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="ion-padding">
+        <h1>⭐ rating</h1>
+        <p>Angular customable rating component</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- simple rate -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Basic Demo</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>Basic readonly rate component</ion-card-header>
+          <ion-card-content>
+            <ngnz-rating [currentRate]="readonlyRate"></ngnz-rating> 
+            <ion-text>
+              Rate: {{readonlyRate}}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- event rate -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Simple Demo with event</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>Simple demo with event change rate</ion-card-header>
+          <ion-card-content>
+            <ngnz-rating 
+                [isReadonly]="false"
+                [currentRate]="simpleRate"
+                (eventActions)="simpleRate = $event?.payload"></ngnz-rating> 
+            <ion-text>
+              Rate: {{simpleRate}}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- custom color -->
+    <ion-row class="ion-no-padding">
+      <ion-col size="12" class="ion-padding-horizontal">
+        <h2>Customizable star</h2> 
+      </ion-col>
+      <ion-col size="12" class="ion-no-padding">
+        <ion-card>
+          <ion-card-header>Change color, hoverEffect, max height size or max rate</ion-card-header>
+          <ion-card-content>
+            <ngnz-rating 
+                color="orange"
+                hoverEffect="opacity"
+                [maxRate]="10"
+                [maxPxSize]="40"
+                [isReadonly]="false"
+                [currentRate]="customizableRate"
+                (eventActions)="customizableRate = $event?.payload"></ngnz-rating> 
+            <ion-text>
+              Rate: {{customizableRate}}
+            </ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageOneComponent } from './page-one/page-one.component';
 import { PageTwoComponent } from './page-two/page-two.component';
 import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
+import { PageRatingComponent } from './page-rating/page-rating.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
     path: 'page-two',
     component: PageTwoComponent,
     canActivate: [IonicModalGuard]
+  },
+  {
+    path: 'page-rating',
+    component: PageRatingComponent
   },
 ];
 

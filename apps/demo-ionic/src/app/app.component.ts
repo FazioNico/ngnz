@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'demo-ionic';
+  title = '@ngnz';
+
+  libs = [
+    {
+      title: 'Components',
+      items: [
+        {title: '⭐ @ngnz/rating', path: 'page-rating'}
+      ]
+    },
+    {
+      title: 'Pipes',
+      items: [
+        {title: '⏰ @ngnz/dayjs', path: 'page-dayjs'}
+      ]
+    }, 
+    {
+      title: 'Guards',
+      items: [
+        {title: '🛡 @ngnz/ionic-modal-guard', path: 'page-two'}
+      ]
+    },
+    {
+      title: 'Directives',
+      items: [
+        {title: '✂️ @ngnz/copy-to-clipboard', path: 'page-copy-to-clipboard'}
+      ]
+    },   
+  ]
+
 }

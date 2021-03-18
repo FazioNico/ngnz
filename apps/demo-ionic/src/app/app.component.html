@@ -1,3 +1,35 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main">
+    <!--  the side menu  -->
+    <ion-menu contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-no-padding">
+        <ion-list>
+
+          <ion-item [routerLink]="'/'">
+            <ion-label>
+              {{title}}
+            </ion-label>
+          </ion-item>
+
+          <ion-item-group *ngFor="let g of libs">
+            <ion-item-divider>
+              <ion-label>{{g.title}}</ion-label>
+            </ion-item-divider>
+            <ion-item [routerLink]="item.path" *ngFor="let item of g.items">
+              <ion-label>{{item.title}}</ion-label>
+            </ion-item>
+          </ion-item-group>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  
+    <!-- the main content -->
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
