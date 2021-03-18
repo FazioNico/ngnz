@@ -9,5 +9,6 @@ module.exports = {
     '<rootDir>/libs/ionic-modal-guard',
     '<rootDir>/apps/demo-ionic',
     '<rootDir>/libs/pdf-flip-book',
+    '<rootDir>/libs/rating',
   ],
 };

@@ -25,6 +25,7 @@
     "ionic-modal-guard": { "tags": [] },
     "demo-ionic": { "tags": [] },
     "demo-ionic-e2e": { "tags": [], "implicitDependencies": ["demo-ionic"] },
-    "pdf-flip-book": { "tags": [] }
+    "pdf-flip-book": { "tags": [] },
+    "rating": { "tags": [] }
   }
 }

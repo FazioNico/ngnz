@@ -20,7 +20,8 @@
       "@ngnz/core": ["libs/core/src/index.ts"],
       "@ngnz/dayjs": ["libs/dayjs/src/index.ts"],
       "@ngnz/ionic-modal-guard": ["libs/ionic-modal-guard/src/index.ts"],
-      "@ngnz/pdf-flip-book": ["libs/pdf-flip-book/src/index.ts"]
+      "@ngnz/pdf-flip-book": ["libs/pdf-flip-book/src/index.ts"],
+      "@ngnz/rating": ["libs/rating/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
