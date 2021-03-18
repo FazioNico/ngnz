@@ -8,13 +8,16 @@ import { PageTwoComponent } from './page-two/page-two.component';
 import { PageModalComponent } from './page-modal/page-modal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicModalGuard } from '@ngnz/ionic-modal-guard';
+import { RatingModule } from '@ngnz/rating';
+
 
 @NgModule({
   declarations: [AppComponent, PageOneComponent, PageTwoComponent, PageModalComponent],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    RatingModule
   ],
   providers: [
     IonicModalGuard
